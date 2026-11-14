@@ -1,14 +1,11 @@
-# FerreKsa × Pamela · Estable
+# FERREKSA × PAMELA | V5 EDITORIAL
 
-Una sola aplicación `index.html`, sin iframes, con navegación directa y responsive.
+**Entrada**: `index.html`. Presentación protagonista y editor lateral opcional. Funciona en GitHub Pages y en navegador móvil. Contenido original completo (16 láminas Laila/Johana, 15 dueños), notas, decisiones, edición, sincronización local de cambios y exportación HTML/JSON.
 
-- Reunión interna: `index.html`
-- Dueños: `index.html?view=duenos`
-- Enlaces clásicos: `presentacion-chicas.html` y `presentacion-duenos.html` redirigen a la app.
-- Editar y acuerdos: se guardan **solamente en el navegador**.
-- «Actualizar dueños» lleva cambios de texto con correspondencia y los acuerdos aprobados quedan en el HTML exportado.
-- Exportar JSON permite llevar cambios a otro navegador; descargar HTML genera documento autónomo.
-- GitHub Pages no sincroniza borradores ni actualiza el repositorio desde la web.
+Se añaden dos lecturas de aproximadamente 3 minutos mediante el botón **3 MIN** y el menú **Opciones**, además de textos .txt.
 
-## Subir
-Usa el script `PUBLICAR_MAC.command` con `gh`, `git`, `rsync` instalados. Hace backup local antes de copiar y verifica el despliegue sin destruir archivos ajenos.
+**Imágenes**: dos escenas editoriales generadas para esta aplicación, guardadas localmente en `assets/`. Son ilustrativas, no fotografías auténticas de las instalaciones de FerreKsa. La página usa colores basados en los repositorios de FerreKsa: tinta, amarillo y blanco roto.
+
+**Límite importante**: GitHub Pages no sincroniza notas/ediciones. Para mostrar cambios a otros usuarios, exporta la presentación y publícala. El botón actualizar dueños traslada cambios de texto por correspondencia, no reescribe automáticamente con IA.
+
+**Publicación**: descarga el ZIP en Descargas y ejecuta el código facilitado. No hay servicios externos ni API keys.
