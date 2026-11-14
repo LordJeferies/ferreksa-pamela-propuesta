@@ -1,24 +1,14 @@
-# FerreKsa × Pamela — Taller editable
+# FerreKsa × Pamela · Estable
 
-Sitio estático compatible con GitHub Pages.
+Una sola aplicación `index.html`, sin iframes, con navegación directa y responsive.
 
-- `index.html`: editor de 16 láminas (Laila/Johana/Pamela), notas, decisiones, y vista de 15 láminas para dirección.
-- `presentacion-duenos.html`: presentación inicial; reemplazarla por el HTML descargado al actualizar.
-- `presentacion-chicas.html`: presentación interna inicial.
-- `ferreksa-acuerdos.json`: versión publicada inicial; puede reemplazarse por exportación de acuerdos.
+- Reunión interna: `index.html`
+- Dueños: `index.html?view=duenos`
+- Enlaces clásicos: `presentacion-chicas.html` y `presentacion-duenos.html` redirigen a la app.
+- Editar y acuerdos: se guardan **solamente en el navegador**.
+- «Actualizar dueños» lleva cambios de texto con correspondencia y los acuerdos aprobados quedan en el HTML exportado.
+- Exportar JSON permite llevar cambios a otro navegador; descargar HTML genera documento autónomo.
+- GitHub Pages no sincroniza borradores ni actualiza el repositorio desde la web.
 
-## Cómo funciona
-
-El editor guarda los cambios automáticamente en **localStorage del dispositivo**. El botón `Actualizar versión dueños` transfiere **solo fragmentos de textos modificados** a la lámina correspondiente, preservando la redacción independiente de dirección en el resto. Las decisiones del equipo se anotan y los acuerdos aprobados aparecen en un anexo del HTML exportado. La versión de dirección también se puede editar.
-
-> No hay sincronización multiusuario en GitHub Pages: para compartir cambios entre dispositivos, exportar/importar JSON o actualizar el repo. Evitar colocar datos privados de empleados, proveedores o acuerdos internos sensibles en un repositorio público.
-
-## Publicar
-
-1. Crear repositorio en GitHub.
-2. Subir todos los archivos de esta carpeta (los dos `plantilla-*.html` son respaldos).
-3. Settings → Pages → Deploy from a branch → main / root.
-4. Abrir `https://USUARIO.github.io/REPO/`.
-5. Al finalizar la reunión, descargar `presentacion-duenos.html`, `ferreksa-acuerdos.json` y reemplazarlos mediante un commit.
-
-Recursos visuales remotos provenientes de los repositorios de FerreKsa; requieren conexión a Internet.
+## Subir
+Usa el script `PUBLICAR_MAC.command` con `gh`, `git`, `rsync` instalados. Hace backup local antes de copiar y verifica el despliegue sin destruir archivos ajenos.
